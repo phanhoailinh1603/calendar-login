@@ -135,7 +135,7 @@ function logout(event) {
 function checkLogin() {
     if (!currentUser) {
         alert('Bạn cần đăng nhập để xem lịch!'); 
-        window.location.href = 'login.html'; 
+        window.location.href = 'https://phanhoailinh1603.github.io/calendar-login/'; 
     }
 }
 
