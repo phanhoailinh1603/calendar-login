@@ -129,7 +129,7 @@ function displayCurrentUser() {
 function logout(event) {
     event.stopPropagation();
     localStorage.removeItem('currentUser'); 
-    window.location.href = 'login.html'; 
+    window.location.href = 'index.html'; 
 }
 
 function checkLogin() {
