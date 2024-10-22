@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Ghi Chú</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lịch Ghi Chú</h1>
+
+        <!-- Khung hiển thị tài khoản hiện tại -->
+        <div class="current-user" onclick="toggleLogout()">
+            <span id="currentUserDisplay"></span>
+            <div id="logoutMenu" class="logout-menu">
+                <button id="logoutBtn" onclick="logout(event)">Đăng Xuất</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <h2 id="monthYear" class="month-title"></h2>
+            <div class="button-group">
+                <button class="month-button" onclick="changeMonth(-1)">&#10094; Tháng Trước</button>
+                <button class="current-button" onclick="goToCurrentMonth()">Hiện Tại</button>
+                <button class="month-button" onclick="changeMonth(1)">Tháng Sau &#10095;</button>
+            </div>
+        </div>
+        <div id="weekdays" class="weekdays"></div>
+        <div id="calendar"></div>
+        
+        <div id="eventDetails" class="event-details">
+            <h3>Chi tiết ngày đã chọn</h3>
+            <div id="eventContent">Không có sự kiện</div>
+            <button id="addEventBtn" onclick="addNote()">Thêm Ghi Chú</button>
+        </div>
+        
+        <div id="noteModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Thêm Ghi Chú cho Ngày <span id="modalDate"></span></h2>
+                <textarea id="noteText" placeholder="Nhập ghi chú..."></textarea>
+                <button onclick="saveNote()">Lưu Ghi Chú</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
